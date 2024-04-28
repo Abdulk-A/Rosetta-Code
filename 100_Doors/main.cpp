@@ -1,8 +1,7 @@
 #include <iostream>
+#include "../helpful.h"
 
 using namespace std;
-
-void print(int*arr, int n);
 
 /*DESCRIPTION:
 
@@ -21,7 +20,7 @@ int main(){
 
     int arr[100] = {1};
 
-    print(arr, 100);
+
 
     for(int i = 1; i < 100; i++) {
         for(int j = 0; j < 100; j++) {
@@ -32,16 +31,7 @@ int main(){
         }
     }
 
-    print(arr, 100);
+    printArr(arr, 100);
     
     return 0;
-}
-
-void print(int*arr, int n) {
-
-    for(int i = 0; i < n; i++) {
-        if(i % 10 == 0) cout << endl;
-        cout << arr[i] << " "; 
-    }
-    cout << endl;
 }
