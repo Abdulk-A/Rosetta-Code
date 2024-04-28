@@ -28,14 +28,15 @@ using namespace std;
 
 void numberArray(int*arr);
 bool prisonerPlay(int * cards);
-bool prisonerPlaySmart(int * cards);
+bool prisonerPlaySmart(const int * cards);
+
 
 int main() {
 
     //initialize and shuffle cards array
     int cards[ONE_HUNDRED];
     numberArray(cards);
-    
+
 
     //prisoners opening cupbards
     int successCount = 0;
@@ -56,7 +57,7 @@ void numberArray(int*arr) {
     }
 }
 
-bool prisonerPlaySmart(int * cards) {
+bool prisonerPlaySmart(const int * cards) {
 
     for(int i = 0; i < ONE_HUNDRED; i++){
         int k = i;
