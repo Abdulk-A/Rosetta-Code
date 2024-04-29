@@ -20,6 +20,16 @@ void printArr(T*arr, int n) {
     std::cout << std::endl;
 }
 
+template< typename T, size_t N, size_t M >
+void printMatrix( T(&matrix)[N][M]) {
+    for ( int x = 0; x < N; x ++ ) {
+        for ( int y = 0; y < M; y++ ) {
+            std::cout << " | " << matrix[x][y] << " | ";
+        }
+        std::cout << std::endl;
+    }
+}
+
 //shuffle elements in array 
 void shuffle(int * arr, int n) {
 
