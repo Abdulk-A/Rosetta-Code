@@ -39,7 +39,18 @@ int main() {
 
 
         if(s == "Q" || s == "q") break;
-        int num = stoi(s);
+
+        int num = 0;
+        for(int i = 0; i < s.length(); i++) {
+            if(s[i] - '0' >= 0 && s[i] - '0' <= 9) {
+                num = stoi(s);
+                break;
+            }
+            else {
+                cout << "MAKE SURE TO ENTER A VALID NUMBER!";
+            }
+        }
+        
 
         updateMatrix(matrix, possibilities, num);
         if (check_board(matrix)) break;
