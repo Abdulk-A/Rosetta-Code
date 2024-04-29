@@ -1,6 +1,7 @@
 #ifndef HELPFUL_H
 #define HELPFUL_H
 
+#include <iomanip>
 #include <iostream>
 #include <random>
 
@@ -22,11 +23,15 @@ void printArr(T*arr, int n) {
 
 template< typename T, size_t N, size_t M >
 void printMatrix( T(&matrix)[N][M]) {
+    std::cout << "\n+----+----+----+----+\n";
     for ( int x = 0; x < N; x ++ ) {
+        std:: cout << "|";
         for ( int y = 0; y < M; y++ ) {
-            std::cout << " | " << matrix[x][y] << " | ";
+            if(matrix[x][y] == 0) std::cout <<  std::setw(3) << "    |";
+            else std::cout <<  std::setw(3) << matrix[x][y] << " |";
         }
-        std::cout << std::endl;
+
+        std::cout << "\n+----+----+----+----+\n";
     }
 }
 
