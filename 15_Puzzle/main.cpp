@@ -62,7 +62,10 @@ int main() {
     
     // printMatrix(matrix);
 
-    if(check_board(matrix)) cout << "SUCCESS" << endl;
+    if(check_board(matrix)) {
+        cout << "SUCCESS" << endl;
+        printMatrix(matrix);
+    }
     else cout << "FAILURE" << endl;
 
     return 0;
