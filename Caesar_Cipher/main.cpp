@@ -6,8 +6,8 @@ using namespace std;
 
 void encode(string &s, int cc){
      for(int i = 0; i < s.length(); i++){
-        if(s[i] >= 65 && s[i] <= 90 && s[i] + cc > 90) s[i] = 'A' + (cc - ('Z' - s[i]));
-        else if(s[i] >= 97 && s[i] <= 122 && s[i] + cc > 122) s[i] = 'a' + (cc - ('z' - s[i]));
+        if(s[i] >= 65 && s[i] <= 90 && s[i] + cc > 90) s[i] = 64 + (cc - ('Z' - s[i]));
+        else if(s[i] >= 97 && s[i] <= 122 && s[i] + cc > 122) s[i] = 96 + (cc - ('z' - s[i]));
         else s[i] = s[i] + cc;
     }
 
